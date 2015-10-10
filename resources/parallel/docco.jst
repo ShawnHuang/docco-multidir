@@ -26,7 +26,8 @@
                 var directory = path.dirname(src) || 'Top Level'; 
                 var arr = sources_hash[directory] || [];
                 arr.push({
-                  href:path.resolve(destination(src)),
+                  //href:path.resolve(destination(src)),
+                  href:"/"+directory+'/'+path.basename(src, path.extname(src))+".html",
                   label:directory+'/'+path.basename(src)
                 });
                 sources_hash[directory] = arr; 
